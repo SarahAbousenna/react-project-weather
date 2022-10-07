@@ -1,0 +1,33 @@
+.Weather {
+  border: solid 1px rgb(189, 188, 188);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+}
+
+.date,
+.city,
+.description {
+  text-align: right;
+}
+
+.date,
+.temp {
+  font-size: 35px;
+}
+
+.celcius,
+.fah,
+.dash {
+  font-size: 15px;
+}
+
+li {
+  list-style-type: none;
+}
+div ul {
+  padding-left: 10px;
+}
+.btn {
+  width: 100%;
+}
