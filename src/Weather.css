@@ -12,9 +12,12 @@
   text-transform: capitalize;
 }
 
-.date,
 .temp {
   font-size: 35px;
+}
+
+.date {
+  font-size: 25px;
 }
 
 .celcius,
