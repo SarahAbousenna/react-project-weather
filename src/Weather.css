@@ -23,7 +23,30 @@
 .celcius,
 .fah,
 .dash {
-  font-size: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(183, 181, 181);
+}
+
+a:visited {
+  text-decoration: none;
+  color: rgb(183, 181, 181);
+}
+
+.fah a:hover,
+.celcius a:hover {
+  text-decoration: none;
+  color: rgb(144, 88, 88);
+}
+
+a:active {
+  text-decoration: none;
+  color: rgb(183, 181, 181);
 }
 
 li {
