@@ -9,6 +9,7 @@
 .city,
 .description {
   text-align: right;
+  text-transform: capitalize;
 }
 
 .date,
