@@ -32,9 +32,9 @@ export default function TemperatureConversion(props) {
         <span>{Math.round(fahrenhite)}° </span>
         <span className="fah">
           <a href="/" onClick={convertToCel}>
-            C | {""}
+            C {""}
           </a>
-          F
+          | F
         </span>
       </div>
     );
