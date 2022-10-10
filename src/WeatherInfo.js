@@ -7,34 +7,23 @@ import TemperatureConversion from "./TemperatureConversion";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="row mt-3">
-        <div className="col-6">
-          <WeatherIcon code={props.data.icon} size={52} />
-        </div>
-        <h1 className="col-6 city">{props.data.city}</h1>
+      <div className="icon">
+        <WeatherIcon code={props.data.icon} />
       </div>
-      <div className="row">
-        <div className="col-6">
-          <span className="temp">
-            <TemperatureConversion celsius={props.data.temperature} />
-          </span>
-        </div>
+      <div className="temp">
+        <TemperatureConversion celsius={props.data.temperature} />
+      </div>
+      <h1 className="city">{props.data.city}</h1>
 
-        <div className="col-6 date">
-          <ForamttedDate date={props.data.date} />
-        </div>
+      <div className="date">
+        <ForamttedDate date={props.data.date} />
       </div>
-      <div className="row">
-        <div className="col-6">
-          <ul>
-            {/* <li className="feelslike">
-              <FeelsLikeConversion celsiusFeelsLike={props.data.main.feels_like} />
-            </li> */}
-            <li className="humidity">Humidity: {props.data.humidity}%</li>
-            <li className="wind">Wind: {Math.round(props.data.wind)} km/hr</li>
-          </ul>
-        </div>
-        <div className="col-6 description"> {props.data.description}</div>
+      <div className="info">
+        <ul>
+          <li className="description"> {props.data.description}</li>
+          <li className="humidity">Humidity: {props.data.humidity}%</li>
+          <li className="wind">Wind: {Math.round(props.data.wind)} km/hr</li>
+        </ul>
       </div>
     </div>
   );

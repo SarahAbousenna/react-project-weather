@@ -1,12 +1,17 @@
 import React from "react";
 import "./App.css";
+import background from "./images/backgroundday.png";
+
 import Weather from "./Weather";
 
 export default function App() {
   return (
     <div className="App">
       <div className="Container">
+        <img src={background} alt="background" className="background" />
+
         <Weather defaultCity="New York" />
+
         <footer>
           This project is created by{" "}
           <a

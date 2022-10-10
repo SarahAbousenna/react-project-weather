@@ -16,11 +16,12 @@ export default function TemperatureConversion(props) {
   if (unit === "celsius") {
     return (
       <div className="TemperatureConversion">
-        <span>{Math.round(props.celsius)}° </span>
+        <span>{Math.round(props.celsius)}°</span>
         <span className="celcius">
-          C | {""}
+          C {""}
+          <span className="dash">|</span>
           <a href="/" onClick={convertToFah}>
-            F
+            {""} F
           </a>
         </span>
       </div>
@@ -29,12 +30,13 @@ export default function TemperatureConversion(props) {
     let fahrenhite = (props.celsius * 9) / 5 + 32;
     return (
       <div className="TemperatureConversion">
-        <span>{Math.round(fahrenhite)}° </span>
+        <span>{Math.round(fahrenhite)}°</span>
         <span className="fah">
           <a href="/" onClick={convertToCel}>
             C {""}
           </a>
-          | F
+          <span className="dash">|</span>
+          {""} F
         </span>
       </div>
     );
