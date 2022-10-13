@@ -1,0 +1,10 @@
+.DailyForecast {
+  text-align: center;
+}
+.WeatherForcastMax {
+  font-weight: bold;
+}
+
+.WeatherForcastMin {
+  opacity: 80%;
+}

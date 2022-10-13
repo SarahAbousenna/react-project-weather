@@ -33,5 +33,7 @@ export default function WeatherIcon(props) {
     "50d": mist,
     "50n": mist,
   };
-  return <img src={codeMapping[props.code]} height={220} alt={props.alt} />;
+  return (
+    <img src={codeMapping[props.code]} height={props.height} alt={props.alt} />
+  );
 }
