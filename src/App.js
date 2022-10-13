@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import background from "./images/backgroundday.png";
-
 import Weather from "./Weather";
+import Switch from "./components/Switch";
 
 export default function App() {
+  const [isToggled, setIsToggoled] = useState(false);
+
   return (
     <div className="App">
       <div className="Container">
-        <img src={background} alt="background" className="background" />
-
+        <Switch
+          rounded={true}
+          isToggled={isToggled}
+          onToggle={() => setIsToggoled(!isToggled)}
+        />
         <Weather defaultCity="New York" />
 
         <footer>

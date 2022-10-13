@@ -1,8 +1,23 @@
 .App {
-  max-width: 800px;
-  margin: 40px auto;
+  margin: auto;
+  padding: 20px 0px;
 }
 footer {
   text-align: center;
-  margin: 10px 0px;
+  color: rgb(127, 127, 127);
+  margin-top: 30px;
+}
+
+footer a {
+  color: rgb(66, 66, 66);
+}
+
+.Container {
+  background: url("./images/bkday.png") fixed center center;
+  margin: 0px auto;
+  border-radius: 10px;
+  width: 1200px;
+  height: 720px;
+
+  /* background-size: 100%; */
 }
