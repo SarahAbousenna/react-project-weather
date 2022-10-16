@@ -3,6 +3,7 @@ import ForamttedDate from "./ForamttedDate";
 import WeatherIcon from "./WeatherIcon.js";
 import TemperatureConversion from "./TemperatureConversion";
 import DailyForecast from "./DailyForecast";
+
 // import Weather from "./Weather";
 
 export default function WeatherInfo(props) {
@@ -20,14 +21,14 @@ export default function WeatherInfo(props) {
         <ForamttedDate date={props.data.date} />
       </div>
       <div className=" row info">
-        <div className="col">
+        <div className="col-2">
           <ul>
             <li className="description"> {props.data.description}</li>
             <li className="humidity">Humidity: {props.data.humidity}%</li>
             <li className="wind">Wind: {Math.round(props.data.wind)} km/hr</li>
           </ul>
         </div>
-        <div className="col mt-5">
+        <div className="col-10 mt-5">
           <DailyForecast coordinates={props.data.coordinates} />
         </div>
       </div>
