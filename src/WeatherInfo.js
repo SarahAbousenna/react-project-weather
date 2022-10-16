@@ -5,8 +5,6 @@ import TemperatureConversion from "./TemperatureConversion";
 import DailyForecast from "./DailyForecast";
 // import Weather from "./Weather";
 
-// import FeelsLikeConversion from "./FeelsLikeConversion";
-
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
