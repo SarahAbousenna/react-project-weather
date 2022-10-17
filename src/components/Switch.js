@@ -11,7 +11,7 @@ const Switch = ({ rounded = false, isToggled, onToggle }) => {
         <input type="checkbox" checked={isToggled} onChange={onToggle} />
         <span className={sliderCX} />
       </label>
-      <span className="mode">Switch Mode</span>
+      <span className="mode">Switch Theme</span>
     </div>
   );
 };

@@ -21,7 +21,7 @@ export default function App() {
           <a
             href="https://www.sarahabousenna.com/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Sarah Abousenna
           </a>{" "}
@@ -29,7 +29,7 @@ export default function App() {
           <a
             href="https://github.com/SarahAbousenna/react-project-weather"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             open sourced{" "}
           </a>

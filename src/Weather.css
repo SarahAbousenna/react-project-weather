@@ -33,10 +33,14 @@ form {
 }
 
 .description {
-  text-align: left;
+  /* text-align: left; */
   text-transform: capitalize;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.weatherinfo {
+  /* margin-left: 20px; */
   padding-top: 50px;
 }
 

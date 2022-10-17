@@ -39,8 +39,8 @@ export default function FormattedDate(props) {
   }
   return (
     <div>
-      <span className="localtime">Your local time:</span> {monthDay} {month},{" "}
-      {day} {hours}:{minutes}
+      <span className="localtime">Your local date & time:</span> {monthDay}{" "}
+      {month}, {day} {hours}:{minutes}
     </div>
   );
 }
