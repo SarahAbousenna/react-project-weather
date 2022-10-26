@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
+import { UilSearch, UilLocationArrow } from "@iconscout/react-unicons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,7 +17,12 @@ export default function Weather(props) {
       city: response.data.name,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
+      feels_like: response.data.main.feels_like,
+      sunrise: new Date(response.data.main.sunrise * 1000),
+      sunset: new Date(response.data.main.sunset * 1000),
       date: new Date(response.data.dt * 1000),
+      high: response.data.main.temp_max,
+      low: response.data.main.temp_min,
     });
   }
 
@@ -39,23 +44,26 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row ">
-            <div className="col-9">
+        <div className="flex flex-row justify-center my-6">
+          <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
+            <form onSubmit={handleSubmit}>
               <input
-                type="search"
-                placeholder="Enter a city ...."
-                className="form-control"
+                type="text"
+                placeholder="Search for city..."
+                className="text-xl p-2 font-medium w-full shadow-xl focus:outline-none capitalize opacity-60 rounded placeholder:lowercase"
                 onChange={handleCityChange}
               />
-            </div>
-            <div className="col-3">
-              <button type="submit" className="btn btn-primary">
-                Search
-              </button>
-            </div>
+            </form>
+            <UilSearch
+              size={30}
+              className="text-white cursor-pointer transition ease-out hover:scale-125"
+            />
+            <UilLocationArrow
+              size={30}
+              className="text-white cursor-pointer transition ease-out hover:scale-125"
+            />
           </div>
-        </form>
+        </div>
         <WeatherInfo data={weatherData} />
       </div>
     );

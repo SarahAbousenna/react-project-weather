@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import WeatherIcon from "./WeatherIcon";
-import "./DailyForecast.css";
 import axios from "axios";
 import WeatherForcastDay from "./WeatherForecastDay";
 
@@ -19,12 +17,12 @@ export default function DailyForecast(props) {
 
   if (loaded) {
     return (
-      <div className="DailyForecast">
+      <div className="DailyForecast text-center">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
             if (index < 7) {
               return (
-                <div className="col" key={index}>
+                <div className="col text-white text-sm " key={index}>
                   <WeatherForcastDay data={dailyForecast} />
                 </div>
               );
