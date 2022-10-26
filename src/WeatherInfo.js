@@ -30,7 +30,7 @@ export default function WeatherInfo(props) {
       </div>
 
       <div>
-        <div className="flex items-center justify-center text-xl text-cyan-300 capitalize">
+        <div className="flex items-center justify-center text-2xl text-cyan-300 capitalize">
           <p>{props.data.description}</p>
         </div>
         <div className="flex items-center justify-between py-1 text-xl text-white">
