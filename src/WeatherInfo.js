@@ -15,6 +15,7 @@ import WeatherIcon from "./WeatherIcon.js";
 // import FormattedSetRise from "./FormattedSetRise";
 // import TemperatureConversion from "./TemperatureConversion";
 import DailyForecast from "./DailyForecast";
+// import HourlyForecast from "./HourlyForecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -62,20 +63,20 @@ export default function WeatherInfo(props) {
 
         <div className="flex flex-row items-center justify-center space-x-2 text-white text-xs py-3">
           <UilSun />
-          <p className="font-light text-xs mt-3 ">Sunrise</p>
+          <p className="font-light text-xs  ">Sunrise</p>
           <span className="font-small "> 10°</span>
-          <p className="font-light text-xs mt-3 ">|</p>
+          <p className="font-light text-xs ">|</p>
 
           <UilSunset />
-          <p className="font-light text-xs mt-3 ">Sunset</p>
+          <p className="font-light text-xs  ">Sunset</p>
           <span className="font-small "> 10°</span>
-          <p className="font-light text-xs mt-3 ">|</p>
+          <p className="font-light text-xs  ">|</p>
           <UilArrowUp />
-          <p className="font-light text-xs mt-3 ">High</p>
+          <p className="font-light text-xs  ">High</p>
           <span className="font-small ">{Math.round(props.data.high)}° </span>
-          <p className="font-light text-xs mt-3 ">|</p>
+          <p className="font-light text-xs  ">|</p>
           <UilArrowDown />
-          <p className="font-light text-xs mt-3 ">Low</p>
+          <p className="font-light text-xs  ">Low</p>
           <span className="font-small ">{Math.round(props.data.low)}° </span>
         </div>
         <div className="flex items-center justify-start mt-2">
@@ -84,6 +85,7 @@ export default function WeatherInfo(props) {
         <hr className="mb-3 mt-0 text-white" />
       </div>
       <DailyForecast coordinates={props.data.coordinates} />
+      {/* <HourlyForecast coordinates={props.data.coordinates} /> */}
     </div>
   );
 }

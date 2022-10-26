@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import WeatherForcastDay from "./WeatherForecastDay";
+import WeeklyForecast from "./WeeklyForecast";
 
 export default function DailyForecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -23,7 +23,7 @@ export default function DailyForecast(props) {
             if (index < 7) {
               return (
                 <div className="col text-white text-sm " key={index}>
-                  <WeatherForcastDay data={dailyForecast} />
+                  <WeeklyForecast data={dailyForecast} />
                 </div>
               );
             } else {

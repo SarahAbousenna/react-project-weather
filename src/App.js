@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Weather from "./Weather";
+import Background from "./Background";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
             href="https://www.sarahabousenna.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white"
+            className="text-cyan-300"
           >
             Sarah Abousenna
           </a>{" "}
@@ -23,7 +24,7 @@ export default function App() {
             href="https://github.com/SarahAbousenna/react-project-weather"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white"
+            className="text-cyan-300"
           >
             open sourced{" "}
           </a>
