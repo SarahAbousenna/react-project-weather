@@ -12,7 +12,7 @@ import {
 
 import ForamttedDate from "./ForamttedDate";
 import WeatherIcon from "./WeatherIcon.js";
-// import FormattedSetRise from "./FormattedSetRise";
+import FormattedSetRise from "./FormattedSetRise";
 // import TemperatureConversion from "./TemperatureConversion";
 import DailyForecast from "./DailyForecast";
 // import HourlyForecast from "./HourlyForecast";
@@ -63,20 +63,26 @@ export default function WeatherInfo(props) {
 
         <div className="flex flex-row items-center justify-center space-x-2 text-white text-xs py-3">
           <UilSun />
-          <p className="font-light text-xs  ">Sunrise</p>
-          <span className="font-small "> 10°</span>
-          <p className="font-light text-xs ">|</p>
+
+          <p className="font-light text-xs pt-3">Sunrise</p>
+          <span className="font-small ">
+            <FormattedSetRise date={props.data.sunrise} />
+          </span>
+          <p className="font-light text-xs pt-3">|</p>
 
           <UilSunset />
-          <p className="font-light text-xs  ">Sunset</p>
-          <span className="font-small "> 10°</span>
-          <p className="font-light text-xs  ">|</p>
+          <p className="font-light text-xs  pt-3">Sunset</p>
+
+          <span className="font-small ">
+            <FormattedSetRise date={props.data.sunset} />
+          </span>
+          <p className="font-light text-xs  pt-3">|</p>
           <UilArrowUp />
-          <p className="font-light text-xs  ">High</p>
+          <p className="font-light text-xs  pt-3">High</p>
           <span className="font-small ">{Math.round(props.data.high)}° </span>
-          <p className="font-light text-xs  ">|</p>
+          <p className="font-light text-xs  pt-3">|</p>
           <UilArrowDown />
-          <p className="font-light text-xs  ">Low</p>
+          <p className="font-light text-xs  pt-3">Low</p>
           <span className="font-small ">{Math.round(props.data.low)}° </span>
         </div>
         <div className="flex items-center justify-start mt-2">

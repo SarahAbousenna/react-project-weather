@@ -11,7 +11,6 @@ export default function FormattedSetRise(props) {
   }
   return (
     <div>
-      {" "}
       {hours}:{minutes}
     </div>
   );

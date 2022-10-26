@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Weather from "./Weather";
-import Background from "./Background";
+// import Background from "./Background";
 
 export default function App() {
   return (
