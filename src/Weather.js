@@ -41,6 +41,10 @@ export default function Weather(props) {
     setSearchedCity(event.target.value);
   }
 
+  function getCurrentPosition() {
+    navigator.geolocation.getCurrentPosition(search);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -57,10 +61,12 @@ export default function Weather(props) {
             <UilSearch
               size={30}
               className="text-white cursor-pointer transition ease-out hover:scale-125"
+              onClick={handleSubmit}
             />
             <UilLocationArrow
               size={30}
               className="text-white cursor-pointer transition ease-out hover:scale-125"
+              onClick={getCurrentPosition}
             />
           </div>
         </div>
