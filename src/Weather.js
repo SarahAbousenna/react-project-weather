@@ -89,11 +89,11 @@ export default function Weather(props) {
                 className="text-white cursor-pointer transition ease-out hover:scale-125"
                 onClick={getCurrentPosition}
               />
-              <div className="flex flex-row w-1/4 items-center justify-center">
+              {/* <div className="flex flex-row w-1/4 items-center justify-center">
                 <button
                   name="metric"
                   className="text-xl text-white font-light transition ease-out hover:scale-125"
-                  // onClick={handleUnitsChange}
+                  onClick={handleUnitsChange}
                 >
                   °C
                 </button>
@@ -101,11 +101,11 @@ export default function Weather(props) {
                 <button
                   name="imperial"
                   className="text-xl text-white font-light transition ease-out hover:scale-125"
-                  // onClick={handleUnitsChange}
+                  onClick={handleUnitsChange}
                 >
                   °F
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <WeatherInfo data={weatherData} />

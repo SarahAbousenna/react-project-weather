@@ -86,7 +86,7 @@ export default function WeatherInfo(props) {
           <span className="font-small ">{Math.round(props.data.low)}° </span>
         </div>
         <div className="flex items-center justify-start mt-2">
-          <p className="text-white font-medium uppercase">Weekly Forecast</p>
+          <p className="text-white font-medium uppercase">Daily Forecast</p>
         </div>
         <hr className="mb-3 mt-0 text-white" />
       </div>
